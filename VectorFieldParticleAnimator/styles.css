@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+}
+
+#space {
+    height: 99vh;
+    width: 99vh;
+    margin: auto;
+    border: 1px solid;
+    overflow: hidden;
+}
+
+#plane {
+    display: block;
+    border: 1px solid;
+    height: 50vh;
+    margin: auto;
+}
+
+#particle {
+    height: 5px;
+    width: 5px;
+    background-color: red;
+    animation-fill-mode: both;
+}
+
+#container {
+    width: 99vh;
+    height: 99vh;
+    display: block;
+    margin: auto;
+    border: 1px solid;
+}

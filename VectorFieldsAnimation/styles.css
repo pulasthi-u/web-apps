@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+}
+
+#space {
+    width: 99vh;
+    height: 99vh;
+    margin: auto;
+    border: 1px solid;
+    overflow: hidden;
+}
