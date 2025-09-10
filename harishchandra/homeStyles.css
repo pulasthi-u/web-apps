@@ -1,0 +1,176 @@
+body {
+    margin: 0;
+    font-family: Roboto;
+}
+
+a {
+    text-decoration: none;
+}
+
+#main {
+    height: calc(100vh + (0.17632698070846497347109038686862 * (100vw - 17px)));
+    width: calc(100vw - 17px);
+    transform-origin: top left;
+    transform: skewY(10deg) translateY(calc(-0.17632698070846497347109038686862 * (100vw - 17px)));
+    overflow-y: hidden;
+}
+
+#unskewedContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    transform-origin: top left;
+    transform: skewY(-10deg) translateY(calc(0.17632698070846497347109038686862 * (100vw - 17px)));
+}
+
+#coverImg {
+    position: absolute;
+    transform: skewY(-10deg) translateY(calc(0.17632698070846497347109038686862 * (100vw - 17px) / 2));
+    width: calc(100vw - 17px);
+    height: calc(100% + 0.17632698070846497347109038686862 * (100vw - 17px));
+    object-fit: cover;
+    z-index: -1;
+}
+
+#intro {
+    width: 40vw;
+    display: grid;
+    grid-template-rows: 27vh 7vh 4vh auto auto;
+    grid-template-areas:
+        "logo"
+        "header"
+        "subHeader"
+        "description"
+        "button";
+    margin: 0 auto;
+}
+
+#logo {
+    display: inline-grid;
+    grid-area: logo;
+    place-self: center;
+    height: 25vh;
+    width: 25vh;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+#header {
+    display: inline-grid;
+    grid-area: header;
+    place-self: center;
+    font-size: 5vh;
+    font-family: Moon;
+    font-weight: bold;
+    margin: 0;
+}
+
+#subHeader {
+    display: inline-grid;
+    grid-area: subHeader;
+    place-self: center;
+    font-size: 2.5vh;
+}
+
+#mainDesc {
+    display: inline-grid;
+    grid-area: description;
+    margin: 1vh 0;
+    text-align: center;
+    font-size: 2.3vh;
+}
+
+#mainButton {
+    display: inline-grid;
+    grid-area: button;
+    width: 55%;
+    place-self: center;
+    padding: 2vh;
+    margin: 1vh 0;
+    background-color: transparent;
+    border: 2px solid black;
+    font-size: 2.25vh;
+    font-family: Roboto;
+    outline: none;
+}
+
+.item {
+    transform: skewY(10deg) translateY(calc(-0.17632698070846497347109038686862 * (100vw - 17px)));
+    transform-origin: top left;
+    height: calc(50vh + (0.17632698070846497347109038686862 * (100vw - 17px)));
+    width: calc(100vw - 17px);
+    overflow: hidden;
+}
+
+.infoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform-origin: top left;
+    transform: skewY(-10deg) translateY(calc(0.17632698070846497347109038686862 * (100vw - 17px)));
+    height: 50vh;
+}
+
+.itemBack {
+    visibility: hidden;
+    position: absolute;
+    transform: skewY(-10deg) translateY(calc(-0.17632698070846497347109038686862 * (100vw - 17px) / 2));
+    height: calc(100% + (0.17632698070846497347109038686862 * (100vw - 17px)));
+    width: calc(100vw - 17px);
+    object-fit: cover;
+    z-index: -1;
+}
+
+.itemGroup {
+    width: 70%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.rightPic {
+    grid-template-areas:
+        "group-img group-content";
+}
+
+.leftPic {
+    grid-template-areas:
+        "group-content group-img";
+}
+
+.groupContent {
+    display: inline-grid;
+    grid-area: group-content;
+    padding: 0 2vh;
+}
+
+.leftPic .groupContent {
+    text-align: right;
+}
+
+.groupImg {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.groupTitle {
+    margin: 0;
+    font-size: 4.5vh;
+    line-height: 100%;
+    font-family: Changa;
+}
+
+.groupDesc {
+    margin: 1vh 0 1.5vh 0;
+}
+
+.groupButton {
+    padding: 1vh;
+    width: 25vh;
+    background-color: transparent;
+    border: 1px solid black;
+    font-family: Roboto;
+    font-size: 2.3vh;
+}

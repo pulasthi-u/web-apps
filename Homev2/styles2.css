@@ -1,0 +1,94 @@
+body {
+	margin:0px;
+	font-family: Roboto;
+}
+
+p {
+	display:flex;
+}
+
+#slideshow {
+	position: relative;
+	background-color: peachpuff;
+	height: 100vh;
+	overflow: hidden;
+}
+
+#login {
+	position: absolute;
+	z-index: 99;
+	border-radius: 100%;
+	background-color: white;
+	opacity: 0.5;
+	height: 45vh;
+	width: 45vh;
+	top: 10%;
+	right: 10%;
+}
+
+#logcontain {
+	text-align: center;
+}
+
+#loghead {
+	font-size: 30px;
+	color: black;
+}
+
+#form {
+	border-collapse: collapse;
+	margin: 4% auto 0% auto;
+	width: 100%;
+}
+
+.tbox {
+	height: 100%;
+	width: 86%;
+	padding: 6%;
+	margin-bottom: 1.5%;
+	border:0;
+	border-bottom: 1px solid gray;
+}
+
+#confirm {
+	width: 100%;
+	height: 100%;
+	padding: 6%;
+	margin: 0;
+	background-color: transparent;
+	border: 0;
+	border-bottom: 1px solid gray;
+}
+
+#description {
+	position: absolute;
+	height: 100vh;
+	width: 100vh;
+	border-radius: 100%;
+	top: 50%;
+	left: -15%;
+	z-index: 99;
+	border: 1px solid black;
+}
+
+#descontain {
+	padding-right: 2%;
+	position: absolute;
+	text-align: right;
+}
+
+#descheader {
+	position:absolute;
+	display: block;
+	right:0;
+	font-size: 45px;
+	font-family: Patrick Hand SC;
+}
+
+#descdesc {
+	position: absolute;
+	display: inline;
+	text-align: right;
+	width: 70%;
+	right: 0;
+}

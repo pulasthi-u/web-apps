@@ -1,0 +1,266 @@
+body {
+    margin: 0;
+    font-family: Roboto;
+    overflow-x: hidden;
+}
+
+#header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 10vh;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(-100%);
+    box-shadow: 1px 1px 5px 0.2px lightgray;
+    padding: 0 1vh;
+    /*background-color: rgb(170, 13, 80);*/
+    background-color: white;
+    display: grid;
+    grid-template-columns: 10vh auto;
+    grid-template-areas:
+        "logo mainTitle";
+    align-items: center;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes descendHeader {
+    0% {transform: translateY(-100%); opacity: 0;}
+    100% {transform: translateY(0%); opacity: 1;}
+}
+
+#logo {
+    display: block;
+    grid-area: logo;
+    height: 9vh;
+    object-fit: cover;
+    float: left;
+    border-radius: 100%;
+}
+
+#mainHeader {
+    display: block;
+    font-family: Moon;
+    font-size: 3vh;
+    align-self: center;
+}
+
+#mainSubtitle {
+    display: block;
+    font-size: 2vh;
+}
+
+#coverImageContainer {
+    display: block;
+    position: absolute;
+    width: calc(100vw - 17px);
+    height: 150vh;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+#coverImage {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+
+#introInformationContainer {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: transparent;
+    width: calc(100vw - 17px);
+    height: 100vh;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+#introInformation {
+    display: grid;
+    margin: 0 auto;
+    width: 40vw;
+    height: calc(20vw + 13vh);
+    grid-template-rows: 20vw 7vh 6vh;
+    grid-template-areas:
+        "profPic"
+        "profName"
+        "info";
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+#profPic {
+    display: inline-grid;
+    grid-area: profPic;
+    width: 18vw;
+    height: 18vw;
+    border-radius: 100%;
+    object-fit: cover;
+    place-self: center;
+    transform: scale(0);
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+#profName {
+    display: inline-grid;
+    grid-area: profName;
+    font-family: Poppins Light;
+    height: 100%;
+    font-size: 5vh;
+    align-self: center;
+    text-align: center;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+#otherInfo {
+    display: grid;
+    grid-area: info;
+    height: 100%;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+        "works lives";
+    align-self: center;
+    align-content: center;
+    text-align: center;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+#works {
+    display: inline-grid;
+    grid-area: works;
+    padding: 1vh 1vh 1vh 5.5vh;
+    background-image: url('work.png');
+    background-position: 1.3vh 0.75vh;
+    background-repeat: no-repeat;
+    background-size: 3.5vh;
+}
+
+#lives {
+    display: inline-grid;
+    grid-area: lives;
+    padding: 1vh 1vh 1vh 5.5vh;
+    background-image: url('lives.png');
+    background-position: 1.3vh 0.75vh;
+    background-repeat: no-repeat;
+    background-size: 3.5vh;
+}
+
+@keyframes zoomIn {
+    0% {transform: scale(0); opacity: 0;}
+    100% {transform: scale(1); opacity: 1;}
+}
+
+@keyframes hideCover {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@keyframes shrinkIntroInfo {
+    0% {grid-template-rows: 20vw 7vh 6vh;}
+    100% {grid-template-rows: 13vw 7vh 6vh;}
+}
+
+@keyframes shrinkProfImage {
+    0% {transform: scale(1);}
+    100% {transform: scale(0.6);}
+}
+
+@keyframes shrinkName {
+    0% {font-size: 5vh;}
+    100% {font-size: 4.5vh;}
+}
+
+@keyframes animateIntroInfoContainer {
+    0% {height: 100vh; transform: translateY(0vh);}
+    100% {height: calc(12vw + 15vh); transform: translateY(17vh);}
+}
+
+#restOfContent {
+    position: relative;
+    padding: 3vh;
+    background-color: white;
+    display: none;
+    transform: translateY(17vh);
+}
+
+@keyframes ascend {
+    0% {transform: translateY(10%); opacity: 0;}
+    100% {transform: translateY(0); opacity: 1;}
+}
+
+.group {
+    width: 50vw;
+    margin: 0 auto 3vh auto;
+    border-radius: 15px;
+    box-shadow: 0px 0px 1px 0.1px gray;
+    padding: 1.5vh;
+}
+
+.groupHeader {
+    margin: 1.5vh 0;
+    font-family: Moon;
+    text-align: center;
+}
+
+.groupContent {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.groupContent tr td {
+    padding: 1.5vh;
+}
+
+.groupContent tr td:nth-child(1) {
+    width: 30%;
+}
+
+.socialIcon {
+    width: 4.1vh;
+    height: 4.1vh;
+    object-fit: cover;
+    margin: 0 1vh 0 0;
+    border-radius: 100%;
+}
+
+#theMap {
+    height: 30vh;
+    width: 100%;
+    margin-top: 2vh;
+    background-image: url('aerial1.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ranking {
+    display: inline-block;
+    padding: 1vh 2vh;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+.platinum {
+    background-color: darkblue;
+}
+
+.gold {
+    background-color: goldenrod;
+}
+
+.silver {
+    background-color: silver;
+}
+
+.bronze {
+    background-color: burlywood;
+}

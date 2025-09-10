@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<script src = "scripts.js"></script>
+<link rel = "stylesheet" href = "styles.css">
+<style>
+    @page {
+        size: A4 landscape;
+    }
+</style>
+<body onload = "initialize();" onscroll = "valscroll();">
+	<a href = "#top"><div id = "backtotop" onclick = "ripple(event, 'circ');"><div id = "circ" class = "circle"></div>
+		</div></a>
+	<table id = "header">
+		<tr>
+			<td>Home</td>
+			<td>About</td>
+			<td>Contact</td>
+			<td>Login</td>
+		</tr>
+	</table>
+	<a name = "top"></a>
+	<div id = "partitiona">
+		<div id = "welcome">
+			<p id = "main">
+				welcome
+			</p>
+			<p id = "description">
+				Welcome to the Vidura College Online Learning System. It's easy. It's convenient. It's fun. Learning has never been better.
+			</p>
+			<a href = "login.html"><button id = "login">
+					Login
+			</button>
+            </a>
+			<p class = "centertext" style="position:absolute; width: 40%; margin: 12.5% 28%; color:white; font-size:14px;">
+				Don't have an account? <a href = "#">Get a password</a>
+			</p>
+		</div>
+	</div>
+	<a name = "partb"></a>
+	<div id = "partitionb">
+		<table class = "containright" id = "tablea">
+			<tr>
+				<td style = "background-image:url('StudentWithBooks.svg'); background-repeat: no-repeat; background-size: 100%; background-position: center; width:40%;">
+				</td>
+				<td style = "width: 60%; padding: 5%; text-align:left;">
+				<span class = "title">
+					Lots of content
+				</span>
+					<br>
+					The Vidura College Learning System has a lot of content. You can learn almost anything. Not just all the syllabi from Grade 1 to Grade 13, but you find lots more additional content.
+				</td>
+				<td id = "featurea"></td>
+			</tr>
+		</table>
+	</div>
+	<a name = "partc"></a>
+	<div id = "partitionc">
+		<table class = "containleft"  id = "tableb">
+			<tr>
+				<td id = "featureb"></td>
+				<td style = "width: 60%; padding: 5%; text-align:right;">
+					<span class = "title">
+						Connect with Friends
+					</span>
+					<br>
+					The Vidura College Learning System has a lot of content. You can learn almost anything. Not just all the syllabi from Grade 1 to Grade 13, but you find lots more additional content.
+				</td>
+				<td style = "background-image:url('amigos.jpg'); background-repeat: no-repeat; background-size: 100%; background-position: center;width:40%;"></td>
+			</tr>
+		</table>
+	</div>
+	<a name = "partd"></a>
+	<div id = "partitiond">
+		<table class = "containright" id = "tablec">
+			<tr>
+				<td style = "background-image:url('earth.jpeg'); background-repeat: no-repeat; background-size: 100%; background-position: center; width:40%;">
+				</td>
+				<td style = "width: 60%; padding: 5%; text-align:left;">
+				<span class = "title">
+					Learn anywhere
+				</span>
+					<br>
+					The Vidura College Learning System has a lot of content. You can learn almost anything. Not just all the syllabi from Grade 1 to Grade 13, but you find lots more additional content.
+				</td>
+				<td id = "featurec"></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

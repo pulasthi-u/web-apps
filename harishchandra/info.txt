@@ -1,0 +1,21 @@
+14 yrs (0 - 12) = Platinum
+8 yrs (6 - 12) = Gold
+> 8 yrs = Silver
+
+NOTE: Grades shall be one-based; starting from 1, 1 inclusive, going upto 13, 13 inclusive
+
+Let;
+
+e = grade you were in, when you left school (1 - 13)
+s = grade you were admitted to (1 - 13)
+n = number of years you were in school [this can be obtained by (e-s)+1 ]
+
+Thus;
+
+Your member ranking shall be calculated by;
+
+e^2 - e + n
+
+Also equal to;
+
+e^2 - s + 1
