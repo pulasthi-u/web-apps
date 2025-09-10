@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    font-family: Roboto;
+    height: 200vh;
+}
+
+#container {
+    height: 100vh;
+    width: calc(100vw - 17px);
+    overflow: hidden;
+    position: fixed;
+}
+
+#layer1 {
+    position: absolute;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.box {
+    height: 75vh;
+    background-color: cadetblue;
+    opacity: 0.5;
+    width: 20vw;
+    margin-left: 150px;
+    margin-top: 100px;
+}
+
+#layer2 {
+    position: absolute;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+#layer3 {
+    position: absolute;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+h1 {
+    margin-left: 200px;
+    margin-top: 150px;
+    font-size: 10vh;
+}

@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+    <link rel = "stylesheet" href = "styles.css">
+    <script src = "javascriptv3.js"></script>
+    <style>
+        
+    </style>
+    <body>
+        <div id = "screen">
+            <div id = "ball">
+            </div>
+        </div>
+        <table id = "container">
+            <tr>
+                <td>
+                    Angle :
+                    <input type = "number" id = "angle" placeholder = "Angle (degrees)" value = 60>
+                </td>
+                <td>
+                    Velocity :
+                    <input type = "number" id = "velocity" placeholder= "Velocity (m/s)" value = 50>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Animate for : 
+                    <input type = "number" id = "time" placeholder=  "Seconds" value = 10>
+                </td>
+                <td>
+                    Acceleration : 
+                    <input type = "number" id = "acceleration" placeholder = "Acceleration (m/s^2)" value = 10>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Intercept : 
+                    <input type = "number" id = "intercept" placeholder = "Intercept">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button id = "button" onclick = "initialize();">
+                        ANIMATE
+                    </button>
+                </td>
+                <td>
+                    <button id = "reset" onclick = "resetAnimation()">
+                        RESET
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

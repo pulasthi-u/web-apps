@@ -1,0 +1,32 @@
+body {
+    font-family: Roboto;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: 
+        "h . . . . . . . . . . . . . . . . he"
+        "li be . . . . . . . . . . b c n o f ne"
+        "na mg . . . . . . . . . . al si p s cl ar";
+}
+
+.element {
+    height: 15vh;
+    margin-top: 1vh;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.symbol {
+    font-size: 4vh;
+    line-height: 100%;
+}
+
+.name {
+    font-size: 2vh;
+    line-height: 100%;
+    margin-top: 1vh;
+}

@@ -1,0 +1,32 @@
+#top {
+	border-top: 2px solid black;
+	border-left: 2px solid black;
+	border-top-left-radius: 100%;
+	width: 50px;
+	height: 50px;
+}
+
+#covertop {
+	background-color: transparent;
+	border-bottom: 3px solid white;
+	border-right: 3px solid white;
+	border-bottom-right-radius: 50%;
+	z-index: 999;
+	width: 102px;
+	margin-left: -3px;
+	height: 102px;
+	margin-top: -104px;
+	transform: rotateZ(0deg);
+}
+
+
+
+#bottom {
+	border-bottom: 2px solid black;
+	border-right: 2px solid black;
+	border-bottom-right-radius: 100%;
+	margin-left: 50px;
+	width: 50px;
+	z-index: -1;
+	height: 50px;
+}

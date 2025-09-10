@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    font-family: Roboto;
+}
+
+input {
+    width: 20vw;
+    padding: 1vh;
+    height: 2vh;
+}
+
+#data {
+    background-color: white;
+    height: 95vh;
+    position: absolute;
+    border-collapse: collapse;
+    width: 20vw;
+    border-right: 1px solid cornflowerblue;
+    transform: translateX(-100%);
+}
+
+#data tr td {
+    padding: 1.5vh 2vh;
+}
+
+#data tr:nth-child(5) {
+    height: 75vh;
+}
+
+#animate {
+    height: 5vh;
+    padding: 1vh;
+    font-family: Roboto;
+    width: 10vw;
+    background-color: white;
+    border: 1px solid gray;
+}
+
+#toggle {
+    position: absolute;
+    height: 8vh;
+    padding: 2vh;
+    width: 10vw;
+    margin-top: 2vh;
+    margin-left: 89.1vw;
+}
+
+#space {
+    position: absolute;
+    width: 95vw;
+    height: 95vh;
+    border: 0.5px solid gray;
+    margin-left: 2.5vw;
+    margin-top: 2.5vh
+}
+
+#projectile {
+    position: absolute;
+    background-color: gray;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    transform: translateY(calc(95vh - 20px));
+}
+
+#straightLinePath, #ground {
+    border: 1px dashed lightgray;
+}

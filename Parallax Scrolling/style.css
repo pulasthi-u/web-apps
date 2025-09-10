@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    font-family: Roboto;
+    height: 1000vh;
+}
+
+/*::-webkit-scrollbar { 
+    display: none; 
+}*/
+
+#container {
+    position: fixed;
+    height: 100vh;
+    width: calc(100vw - 17px);
+    background-color: transparent;
+    overflow-y: hidden;
+}
+
+#sec1 {
+    height: 100vh;
+    background-image: url('lambo3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#sec2 {
+    height: 100vh;
+    width: calc(100vw - 17px);
+    background-color: darkgrey;
+    background-image:url('B3v1qjG.jpg');
+    background-size: cover;
+}
+
+#sec3 {
+    height: 100vh;
+    width: calc(100vw - 17px);
+    background-color: cadetblue;
+    background-image: url('photo-1557653826-2d4462ee208c.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#sec4 {
+    height: 100vh;
+    width: calc(100vw - 17px);
+    background-color: darkgrey;
+    background-image:url('tiger_logo_Tom_Anders_Watkins_2014-16-07.png');
+    background-size: cover;
+}

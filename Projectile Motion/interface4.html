@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Projectile Motion v4</title>
+        <link rel="stylesheet" href="styles4.css">
+        <script src="javascript5.js"></script>
+        <style></style>
+    </head>
+    <body>
+        <div id="viewport">
+            <div id="screen"></div>
+            <div id="inputs">
+                <div class="holder">
+                    Initial Velocity
+                    <input type="number" id='initialVelocity' value=75> m s<sup>-1</sup>
+                </div>
+                <div class="holder">
+                    Angle of Launch
+                    <input type="number" id='angle' value=75> degrees
+                </div>
+                <div class="holder">
+                    Animate for
+                    <input type="number" id='time' value=16> seconds
+                </div>
+                <div>
+                    Gravitational Acceleration
+                    <input type="number" id="gravity" value=10> m s<sup>-2</sup>
+                </div>
+                <button id="animateButton" onclick="animateProjectile();">Animate</button>
+            </div>
+        </div>
+    </body>
+</html>

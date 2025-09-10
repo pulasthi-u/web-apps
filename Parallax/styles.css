@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    font-family: Roboto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.window {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 100vh;
+    perspective: .01cm;
+    perspective-origin: center;
+    transform-style: preserve-3d;
+    transform-origin: center;
+}
+
+.blank {
+    height: 200vh;
+    width: 100%;
+    position: absolute;
+}
+
+.item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.i2 {
+    background-color: bisque;
+    transform: translateZ(-1px) scale(3.65);
+}
+
+.i1 {
+    background-color: aqua;
+}
+
+.i3 {
+    background-color: seagreen;
+    transform: translateZ(-2px) scale(6.3);
+}

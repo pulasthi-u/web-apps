@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.parallaxWindow {
+    perspective: 1px;
+    perspective-origin: center;
+    transform-style: preserve-3d;
+    overflow-y: scroll;
+    height: 100vh;
+    font-size: 5vh;
+}
+
+.parallaxElement {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: calc(100vw - 17px);
+    height: 100vh;
+    color: white;
+}
+
+.ele1 {
+    background-image: url('https://static.pexels.com/photos/207153/pexels-photo-207153.jpeg');
+    transform: translateZ(-0.7px);
+}
+
+.ele2 {
+    background-image: url('https://static.pexels.com/photos/192136/pexels-photo-192136.jpeg');
+    transform: translateZ(-0.2px);
+}

@@ -1,0 +1,164 @@
+body {
+    margin: 0;
+    font-family: Roboto;
+}
+
+#welcomeScreen {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('architecture.jpeg');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#picContain {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    opacity: 1;
+    display: block;
+    animation-name: fadeoutAndDisappear;
+    animation-duration: 1s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+}
+
+#content {
+    width: 25vw;
+    margin-left: 37.5vw;
+    border-collapse: collapse;
+}
+
+#content tr:nth-child(1) td {
+    width: 25vw;
+    padding: 1vh;
+    text-align: center;
+    overflow: hidden;
+}
+
+#content tr:nth-child(2) td {
+    width: 25vw;
+    padding: 2vh;
+    text-align: center;
+    color: white;
+    text-shadow: 0px 0px 100px black;
+}
+
+#topBar {
+    border: 1px solid white;
+    transform: translateX(calc(100% + 2vh));
+    animation-name: enterRight;
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;    
+}
+
+@keyframes enterRight {
+    0% {transform: translateX(calc(100% + 2vh));}
+    100% {transform: translateX(0%)}
+}
+
+#bottomBar {
+    border: 1px solid white;
+    transform: translateX(calc(-100% - 2vh));
+    animation-name: enterLeft;
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes enterLeft {
+    0% {transform: translateX(calc(-100% - 2vh));}
+    100% {transform: translateX(0%)}
+}
+
+#text {
+    font-family: PT Serif;
+    color: white;
+    text-shadow: 0px 0px 50px black;
+    font-size: 10vh;
+    opacity: 0;
+    animation-name: fadein;
+    animation-duration: 1s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fadein {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes fadeout {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@keyframes fadeoutAndDisappear {
+    0% {opacity: 1; display: block;}
+    100% {opacity: 0; display: none;}
+}
+
+@keyframes fadeinAndAppear {
+    0% {opacity: 0; display: none;}
+    100% {opacity: 1; display: block;}
+}
+
+#content tr:nth-child(2) td {
+    opacity: 0;
+    animation-name: fadein;
+    animation-duration: 1s;
+    animation-delay: 1.8s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+#userAccounts {
+    opacity: 0;
+    height: 45vh;
+    margin-top: 27.5vh;
+    width: 40vh;
+    margin-left: calc(50vw - 20vh);
+    animation-name: fadeinAndAppear;
+    animation-duration: 1s;
+    animation-delay: 7.5s;
+    animation-fill-mode: forwards;
+}
+
+.user {
+    height: 45vh;
+    width: 40vh;
+    border-collapse: collapse;
+}
+
+.user tr:nth-child(1) td {
+    width: 40vh;
+    height: 40vh;
+    vertical-align: middle;
+}
+
+.profPic {
+    height: 30vh;
+    width: 30vh;
+    border-radius: 100%;
+    margin-left: 5vh;
+    background-image: url('me.jpg');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;    
+}
+
+.user tr:nth-child(2) td {
+    width: 40vh;
+    height: 5vh;
+    text-align: center;
+    font-size: 5vh;
+    line-height: 100%;
+    color: white;
+    text-shadow: 0px 0px 20px black;
+}

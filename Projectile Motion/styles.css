@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    font-family: Roboto;
+    width: 100vw;
+    height: 100vh;
+}
+
+#screen {
+    width: 50vw;
+    height: 50vh;
+    margin-left: 25vw;
+    margin-top: 15vh;
+    border: 1px solid;
+}
+
+#ball {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: darkgray;
+    border-radius: 100%;
+    transform: translateY(calc(50vh - 20px));
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+#straightLinePath {
+    border: 0.5px dashed lightgray;
+    transform-origin: left;
+    position: absolute;
+}
+
+#baseLine {
+    border: 0.5px dashed gray;
+    z-index: 99;
+}
+
+#myCanvas {
+    height: 60vh;
+    width: 60vw;
+    margin-top: 20vh;
+    margin-left: 20vw;
+    border: 1px solid;
+}
+
+#container {
+    display: block;
+    margin-top: 5vh;
+    border: 1px solid;
+    margin-left: 10vw;
+    width: 80vw;
+    border-collapse: collapse;
+}
+
+#container td {
+    padding: 2vh;
+    width: 40vw;
+    border: 1px solid lightgray;
+}
+
+input {
+    display: inline-block;
+    width: 30vh;
+    padding: 1vh;
+}

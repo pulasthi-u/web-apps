@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    font-family: Roboto;
+}
+
+#viewport {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 75% 25%;
+    grid-template-areas:
+        'screen'
+        'inputs';
+}
+
+#screen {
+    grid-area: 'screen';
+    border: 1px solid;
+    margin: 5px;
+}
+
+#inputs {
+    display: flex;
+    flex-direction: column;
+    grid-area: 'inputs';
+}
+
+#animateButton {
+    width: 20vw;
+}
+
+#projectile {
+    position: absolute;
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    /*transform: translateY(calc(75vh - 60px));*/
+    animation-fill-mode: forwards;
+    animation-delay: 5s;
+}
+
+#groundLevelLine {
+    position: absolute;
+    border: 0;
+    background-color: red;
+    width: 100%;
+    height: 1px;
+}
+
+.majorVerticalLines {
+    position: absolute;
+    height: 75vh;
+    background-color: black;
+    width: 1px;
+    border: 0;
+}
+
+.majorHorizontalLines {
+    position: absolute;
+    background-color: black;
+    border: 0;
+    width: 100%;
+    height: 1px;
+}
