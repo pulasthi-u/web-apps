@@ -1,0 +1,50 @@
+body {
+    font-family: Roboto;
+    margin: 0;
+}
+
+#calculator {
+    display: grid;
+    width: 25vw;
+    height: 70vh;
+    grid-template-rows: 10vh auto;
+    grid-template-columns: 75% 25%;
+    grid-template-areas:
+        "input input"
+        "numbers operators";
+}
+
+#input {
+    display: inline-grid;
+    grid-area: input;
+}
+
+#numbers {
+    display: grid;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-areas:
+        "seven eight nine"
+        "four five six"
+        "one two three"
+        "point zero pm";
+}
+
+#operators {
+    display: grid;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-areas:
+        "plus"
+        "minus"
+        "multiply"
+        "divide";
+}
+
+.button {
+    display: inline-grid;
+    background-color: transparent;
+    border: 0;
+    padding: 3vh;
+    font-family: Roboto;
+    font-size: 2.3vh;
+}

@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    font-family: Roboto;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.boxOne {
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+}
+
+.boxTwo {
+    background-color: green;
+    width: 100px;
+    height: 100px;
+}
+
+.boxThree {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}
+
+.boxFour {
+    background-color: black;
+    width: 100px;
+    height: 100px;
+}
+
+.boxFive {
+    background-color: pink;
+    width: 100px;
+    height: 100px;
+}

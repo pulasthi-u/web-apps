@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    font-family: Roboto;
+    display: grid;
+    grid-template-columns: 4vw 92vw 4vw;
+    grid-template-rows: 6vh 88vh 6vh;
+    grid-template-areas:
+        ". . ."
+        ". welcome ."
+        ". . .";
+}
+
+.welcome {
+    display: inline-grid;
+    grid-area: welcome;
+    /*border-radius: 25px;
+    box-shadow: 0px 1px 10px 1px lightgray;*/
+}
+
+.content {
+    display: inline-grid;
+    place-self: center;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 20% 80%;
+    grid-template-areas:
+        ". message ."
+        ". body .";
+}
+
+.message {
+    display: inline-grid;
+    grid-area: message;
+    align-self: center;
+    justify-content: center;
+    font-family: Poppins Light;
+    text-align: center;
+}
+
+.title {
+    font-size: 7vh;
+}
+
+hr {
+    border: 0.5px solid black;
+    width: 75%;
+}
+
+.body {
+    display: inline-grid;
+    grid-area: body;
+    justify-content: center;
+    align-content: center;
+    padding: 1vh;
+    text-align: center;
+}
+
+.formLayout {
+    border-collapse: collapse;
+}
+
+.formLayout tr td {
+    padding: 2vh 1vh 0vh 1vh;
+}
+
+.label {
+    display: block;
+    padding-bottom: 1.2vh;
+}
+
+.formButton {
+    background-color: white;
+    border: 1px solid lightgray;
+    margin-top: 1.2vh;
+    padding: 1.5vh;
+    width: 35vh;
+    font-family: Roboto;
+    font-size: 2.28vh;
+}
+
+.formButton:hover {
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    background-color: lightgray;
+    color: white;
+}

@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Scandium</title>
+        <link rel="stylesheet" href="elementStyles.css">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+    <body>
+        <div id="mainFrame">
+            <div class="arrowContainer" style="left: 0;">
+                <img src="img/icons8-back-96.png" class="navArrow">
+            </div>
+            <div id="content">
+                <div class="popup" id="1">
+                    <img src="https://img.icons8.com/emoji/100/000000/glowing-star.png" class="emotePic">
+                    Lightweight should kind of be the first of second thing that comes to my mind when I hear \(\ce{Sc}\)
+                </div>
+                <img class="mainPic" src="img/Scandium_sublimed_dendritic_and_1cm3_cube.jpg" class="mainPic">
+                <div class="title">
+                    <div class="elementBox">
+                        <span class="atomicNumber">21</span>
+                        <span class="elementSymbol">\(\ce{Sc}\)</span>
+                        <span class="massNumber">44.956</span>
+                    </div>
+                    <h2 class="elementName">Scandium</h2>
+                </div>
+                <ul class="listOfPoints">
+                    <li>
+                        Scandium was one of the elements predicted by Mendeleev and later confirmed by its discovery
+                    </li>
+                    <li>
+                        A <span class="hoverUnderline" onmouseover="showPopup(this, '1');" onmouseout="hidePopup('1');">lightweight</span> metal, that is fairly resistant to corrosion
+                    </li>
+                    <li>
+                        Has a higher melting point than \(\ce{Al}\), and is therefore used in the aerospace industry over \(\ce{Al}\), where resistance to high temperatures is required
+                    </li>
+                    <li>
+                        Scandium is also used to make bicycle frames and sports equipment
+                    </li>
+                    <li>
+                        The only ion formed by Scandium is \(\ce{Sc^3+}\), which has no \(\ce{d}\) electrons, and is therefore colorless.
+                    </li>
+                </ul>
+                <div class="buttonContainer">
+                    <a href="menu.html"><button class="button">Main Menu</button></a>
+                </div>
+            </div>
+            <div class="arrowContainer" style="right: 0;">
+                <a href="ti.html">
+                    <img src="img/icons8-forward-96.png" class="navArrow">
+                </a>
+            </div>
+        </div>
+        <script src="elementScripts.js"></script>
+    </body>
+</html>

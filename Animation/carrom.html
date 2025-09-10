@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            #board {
+                width: 40vh;
+                height: 60vh;
+                border: 1px solid;
+            }
+            #ball {
+                width: 10px;
+                height: 10px;
+                border-radius: 100%;
+                background-color: red;
+                margin: -5px 0 0 -5px;
+                transform: translateY(60vh) translateX(10vh);
+                animation-duration: 5s;
+            }
+            /* tan theta - a*tan theta */
+        </style>
+    </head>
+    <body>
+        <div id="board">
+            <div id="ball"></div>
+        </div>
+        <script>
+            var theta = Math.PI/4;
+            var p = 10, a = 40, b = 60, t = Math.tan(theta);
+            console.log(theta);
+            var l1 = "25% {transform: translateX(" + a + "vh) translateY(" + (b - (t*(a-p))) + "vh);}";
+            var l2 = "50% {transform: translateX(" + (((2*a*t)-(p*t)-b)/t) + "vh) translateY(0vh);}";
+            var l3 = "75% {transform: translateX(0vh) translateY(" + (b-((2*b)+(p*t)-(2*a*t))) + "vh);}";
+            var l4 = "100% {transform: translateX(" + (((2*b)+(p*t)-(2*a*t))/t) + "vh) translateY(" + b + ")vh);}";
+            var anim = "@keyframes move { 0% {transform: translateX("+p+"vh) translateY(" + b + "vh)} " + l1 + " " + l2 +  " " + l3 + " " + l4 + "}";
+            console.log(anim);
+            document.getElementsByTagName("STYLE")[0].insertAdjacentHTML('beforeEnd', anim);
+            document.getElementById("ball").style.animationName = "move";
+        </script>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+
+<style>
+
+#butn {
+position:relative;
+width:200px;
+height:50px;
+background-color:rgb(85,179,237);
+overflow:hidden;
+}
+
+#circle {
+position:absolute;
+border-radius:100%;
+background-color:white;
+
+}
+
+@keyframes ripple {
+0% {width:10px; height:10px; opacity:0.3;}
+50% {height:500px; width:500px; margin-left:-250px; margin-top:-250px; opacity:0.5;}
+100% {height:750px; width:750px; margin-left:-375px; margin-top:-375px; opacity:0;}
+}
+
+</style>
+
+<body onload = "centerText('butn', 'text');">
+
+<script src="Javascript.js"></script>
+
+<div id = "butn" onclick="position(event, 'circle')">
+<div id = "circle"></div>
+<p id = "text">Click Me</p>
+</div>
+
+</body>
+
+<script>
+
+function position(event, divid) {
+var x = event.clientX;
+var y = event.clientY;
+var bmargin = window.getComputedStyle(document.getElementsByTagName('body')[0]).getPropertyValue('margin-top').replace('px', '');
+// get the margins of the parent element also and subtract from below
+var mLeft = x-bmargin-5;
+var mTop = y-bmargin-5;
+var div = document.getElementById(divid);
+div.style.marginLeft = mLeft + 'px';
+div.style.marginTop = mTop + 'px';
+div.style.animationName = 'ripple';
+div.style.animationDuration = '2s';
+setTimeout(function() { div.style.animationName = ''}, 2000); 
+}
+
+</script>
+
+</html>

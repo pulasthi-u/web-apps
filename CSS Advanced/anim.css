@@ -1,0 +1,194 @@
+.rotatingLine {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: antiquewhite;
+    width: 200px;
+    height: 3px;
+    transform-origin: center left;
+    /*animation-name: rotate;
+    animation-duration: 100ms;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;*/
+}
+
+.rotatingLine.l2 {
+    transform: rotateZ(-5deg);
+}
+
+.rotatingLine.l3 {
+    transform: rotateZ(-10deg);
+}
+
+.rotatingLine.l4 {
+    transform: rotateZ(-15deg);
+}
+
+.rotatingLine.l5 {
+    transform: rotateZ(-20deg);
+}
+
+.rotatingLine.l6 {
+    transform: rotateZ(-25deg);
+}
+
+.rotatingLine.l7 {
+    transform: rotateZ(-30deg);
+}
+
+.rotatingLine.l8 {
+    transform: rotateZ(-35deg);
+}
+
+.rotatingLine.l9 {
+    transform: rotateZ(-40deg);
+}
+
+.rotatingLine.l10 {
+    transform: rotateZ(-45deg);
+}
+
+.rotatingLine.l11 {
+    transform: rotateZ(-50deg);
+}
+
+.rotatingLine.l12 {
+    transform: rotateZ(-55deg);
+}
+
+.rotatingLine.l13 {
+    transform: rotateZ(-60deg);
+}
+
+.rotatingLine.l14 {
+    transform: rotateZ(-65deg);
+}
+
+.rotatingLine.l15 {
+    transform: rotateZ(-70deg);
+}
+
+.rotatingLine.l16 {
+    transform: rotateZ(-75deg);
+}
+
+.rotatingLine.l17 {
+    transform: rotateZ(-80deg);
+}
+
+.rotatingLine.l18 {
+    transform: rotateZ(-85deg);
+}
+
+#rotatingBlock {
+    margin-left: 500px;
+    margin-top: 300px;
+    width: 300px;
+    background-color: aliceblue;
+    transform-origin: bottom left;
+}
+
+#rotatingBlock:hover {
+    transition-property: all;
+    transition-timing-function: linear;
+    transition-duration: 5s;
+    transform: rotateZ(27000deg); /*360Ft deg, F = fps, t = transition duration */
+}
+
+/*takes a snapshot every 1000/60 = 50/3 ms. (at times of the form 50N/3 ms.) our thing should rotate so that it is in a distinct position at integer multiples of 50/3 ms. if i have an angular speed of S deg/ms, then in 50/3 ms, ill turn 50S/3 deg. at some integer multiple of this time, ill have turned through 50NS/3 deg. we need 50NS/3 to be distinct angles.
+say we need P distinct positions, equally spread out. then the angle between each position is 360/P. this is the angle our thing must turn through in 50/3 ms, so 50S/3 = 360/P, so S = (3*36)/5P.
+...what can N be so that 50NS/3 = 360? N = (3*36)/5S. the smaller S is the bigger N is...
+but, ill see it at the position 50NS/3 deg, only at times of (50N/3 + M*time taken for complete rotation) ms = 50N/3 + 360M/S ms; hence, every 360/S ms. to achieve F fps = F/1000 fpms = 1 frame every 1000/F ms. i need 360/S = 1000/F, so S = 360F/1000 = 9F/25. hence, N = (3*36*25)/(5*9*F) = 12/F. i can only achieve a max of 12 distinct positions, coz min F = 1.
+
+okay so it will take the rotating stick 360/S ms to get from one position to the same position again after going round a circle. the initial position of it was frame 1, then next time it comes to the same position it is frame 2. so the gap between frames is 360/S ms. how many FPS is that? 1000ms / (360/S) = 25S/9 fps. if u want to achieve F fps, 25S/9 = F, so S = 9F/25, rotate at 9F/25 deg/ms. basically each position of the stick is a frame. each frame (i.e. position of the stick) is displayed to us F times a second, so we have F fps in that sense. however, the kinda resolution we get is limited. the angle between two distinct positions of the stick is 50/3 ms * S = 50/3 * 9F/25 = 6F deg. after n distinct positions, the angle turned thru is 6Fn. after 6Fn = 360, it just starts repeating, so the actual number of distinct positions can be found when 6Fn = 360, and n = 60/F. this is poor.
+e.g., if F = 30, then n = 2. hence there will be 2 positions of the stick. we will see it at position 1, F times a second. we will also see it at position 2, F times a second. however with only 2 positions, we cannot show a continuum of positions.
+
+if S = 9F/25 deg/ms, after t sec, the angle it must turn thru is (9F/25) * 1000t = 360Ft deg.
+*/
+
+.pixel {
+    background-color: red;
+    width: 5px;
+    height: 100%;
+    margin-left: 3px;
+}
+
+.pixel.p2 {
+    animation-name: showhide;
+    background-color: blue;
+    animation-duration: 5s;
+    /* 1000/F ms, when F = 15, 66.66 ms. 
+    so a frame lasts for 1000/F ms. im actually gonna have to describe what this pixel needs to do every 1000/F ms. hence make animation duration = total time im playing this for. in this case, t = 5 sec, the transition duration above. choose percentages of t that equal to integer multiples of 1000/F, and say what must happen at each stage in the animation.
+    
+    but, the same line represents another frame. that other frame will be seen 50/3 ms after the prev frame; the nth frame will be seen 50n/3 ms after. hence, what must be shown on nth frame must appear at times given by 1000N/F + 50n/3 ms for integer N.
+    */
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.pixel.p1 {
+    animation-name: showhide;
+    background-color: red;
+    animation-duration: 500ms; /* 1000/F ms */
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+/*
+1000/F ms = 1/F sec. (1 frame every 1/F sec.) hence 1/F seconds within t seconds is (1/F)/t = 1/Ft => 100/Ft %. frames appear at integer multiples of 1/F sec. hence, what you want to be visible in a particular frame (particular position of the line), you describe in integer multiple percentages of 100/Ft, so 100n/Ft %. you can go upto n = Ft.
+
+basically the first frame will be visible at times given by n/F sec. (integer multiples of 1/F.)
+the second frame will be seen 50/3 ms after the first one. it will be seen again after 1000/F ms, so again at 1000/F + 50/3. etc. it will be seen at times given by 1000n/F + 50/3, for integer n.
+the Nth frame will be seen 50N/3 seconds after the first one, so the Nth frame will be shown at times given by 1000n/F + 50N/3 ms, for integer N and n. in seconds, this is n/F + N/60.
+
+of t seconds then, times at the percentages (n/F + N/60)*100/t = 100n/Ft + 5N/3t are for the Nth frame. vary n to get different times for the same frame, i.e., for each n you display something different on the Nth frame.
+
+so N can be at most 60/F. for zeroth frame, you get the percentages 100n/Ft. for next frame, you get percentages 100n/Ft + 5/3t. ... for the last frame you get the percentages 100n/Ft + 5*60/3*F*t = 100n/Ft + 100/Ft = 100(n+1)/Ft. if at 100% we want the last frame's last time (n = n_max), then we need n_max+1 = Ft, n_max = Ft - 1. if 0% is the first frame's first time, then 100n_min/Ft = 0, n_min = 0, so we let n vary through 0 and Ft - 1 for each frame.
+
+in my case, F = 15, t = 5. the percentages i get are
+100n/(75) + 5N/(3*5) = 4n/3 + N/3 = (4n+N)/3. n varies from 0 to 74. N varies from 0 to 4.
+
+
+if the total transition goes for t seconds, it will turn through 360Ft deg. any two consecutive positions of the stick are different by 6F degrees. so you can specify animations at (6F/360Ft)*100% intervals = (5/(3t)) %. starting from zero, you will be back at the same position at (360/360Ft)*100 = (100/Ft) % and integer multiples of it. [it will go through 60/F distinct positions before returning to same position, so at 5/3t per position, thats (5/3t) * (60/F) = 100/Ft.]
+
+so locate the 100/Ft percentages. make 60/F increments, each one 5/3t. then specify.
+
+example, F = 15, t = 5. then 100/Ft = 100/(15*5) = 4/3, and 5/3t = 1/3. num distinct pos = 60/15 = 4. hence
+
+these percentages correspond to the first distinct position of the stick.
+0% - start [first frame at distinctpos1]
+1.33% - start again (4/3%) [second frame at distinctpos1]
+2.66% - start for third time etc (2*(4/3)%) [third frame at distinctpos1]
+...
+
+(0 + 0.33%) - first frame at distinctpos2
+(1.33% + 0.33%) - second frame at distinctpos2
+(2.66% + 0.33%) - third frame at distinctpos2
+...
+
+(0 + 0.66%) - first frame at distinctpos3
+(1.33 + 0.66%) - second at pos3
+...
+
+(0 + 1%) - first at distinctpos4
+(1.33% + 1%) - second at pos4
+etc.
+
+hence take image or video. fix a start position and sample from that position F times every second. first sample you get is given as first frame at distinctpos1. second sample you get from same pos is given as second frame at distinctpos1 etc.
+then u fix another position that is 6F deg away from previous position and repeat; assign each sample to the corresponding distinctpos2 frame.
+repeat 60/F times.
+*/
+
+@keyframes showhide {
+    0% {opacity: 1;}
+    1.33% {opacity: 0;}
+    50.99% {opacity: 0;}
+    80% {opacity: 1;}
+    100% {opacity: 1;}
+}
+
+@keyframes rotate {
+    from {transform: rotateZ(0deg);}
+    to {transform: rotateZ(360deg);}
+}

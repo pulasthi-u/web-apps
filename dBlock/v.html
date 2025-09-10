@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Vanadium</title>
+        <link rel="stylesheet" href="elementStyles.css">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+    <body>
+        <div id="mainFrame">
+            <div class="arrowContainer" style="left: 0;">
+                <a href="ti.html">
+                    <img src="img/icons8-back-96.png" class="navArrow">
+                </a>
+            </div>
+            <div id="content">
+                <div class="popup" id="1">
+                    <img src="https://img.icons8.com/emoji/100/000000/glowing-star.png" class="emotePic">
+                    The first thing that should come to my mind is this <i>excellent</i> resistance to corrosion,
+                    <br>
+                    <b>BUT</b>,
+                    <br>
+                    only at <i>room temperature</i>. Recall that \(\ce{Ti}\) also has excellent resistance to corrosion; and this is independent of temperature
+                </div>
+                <div class="popup" id="2">
+                    <img src="https://img.icons8.com/emoji/100/000000/glowing-star.png" class="emotePic">
+                    Remember <i>room temperature</i>!
+                    <br>
+                    Recall regarding "room temperature", that \(\ce{Cr}\) would get oxidized to \(\ce{Cr2O3}\) by \(\ce{O2}\) at room temperature
+                </div>
+                <div class="popup" id="3">
+                    <img src="https://img.icons8.com/emoji/100/000000/glowing-star.png" class="emotePic">
+                    Alloys with \(\ce{V}\) are made by adding \(\ce{V}\) to steel; this point is kind of an extension of this fact.
+                    <br>
+                    Try to correlate the previous point about alloys, to this point, which is about what happens when a small quantity of \(\ce{V}\) is added to steel
+                </div>
+                <div class="popup" id="4">
+                    <img src="https://img.icons8.com/emoji/100/000000/glowing-star.png" class="emotePic">
+                    I kind of seem to forget this point, about \(\ce{V2O5}\).
+                    <br>
+                    This popup is just to remind you that it's there! And just so you're here, there's also a point about \(\ce{Mn}\)--the fact that it is electropositive--sthat you kept forgetting
+                </div>
+                <img class="mainPic" src="img/Vanadium_etched.jpg" class="mainPic">
+                <div class="title">
+                    <div class="elementBox">
+                        <span class="atomicNumber">23</span>
+                        <span class="elementSymbol">\(\ce{V}\)</span>
+                        <span class="massNumber">50.942</span>
+                    </div>
+                    <h2 class="elementName">Vanadium</h2>
+                </div>
+                <ul class="listOfPoints">
+                    <li>
+                        \(\ce{V}\) has <span class="hoverUnderline" onmouseover="showPopup(this, '1');" onmouseout="hidePopup('1');">excellent resistance to corrosion</span> at <span class="hoverUnderline" onmouseover="showPopup(this, '2');" onmouseout="hidePopup('2');">room temperature</span>
+                    </li>
+                    <li>
+                        Vanadium is mainly used to make steel alloys, which in turn are used to make high speed cutting tools, and springs
+                    </li>
+                    <li>
+                        <span class="hoverUnderline" onmouseover="showPopup(this, '3');" onmouseout="hidePopup('3');">Adding a small quantity</span> of \(\ce{V}\) to steel causes the formation of small grains of \(\ce{V4C3}\), which reinforce the steel and increase its strength
+                    </li>
+                    <li>
+                        <span class="hoverUnderline" onmouseover="showPopup(this, '4');" onmouseout="hidePopup('4');">Vanadium pentoxide</span> (\(\ce{V2O5}\)) is used as a catalyst in the Contact Process in the manufacture of sulfuric acid. \(\ce{V2O5}\) catalyzes the contact reaction as follows
+                        <span class="chemReaction">
+                            \(\ce{V2O5 + SO2 -> SO3 + V2O4}\)
+                        </span>
+                        <span class="chemReaction">
+                            \(\ce{V2O4 + O2 -> V2O5}\)
+                        </span>
+                    </li>
+                    <figure>
+                        <img src="img/vanadium-pentoxide-powder-500x500.jpg">
+                        <figcaption number="1">
+                            Vanadium pentoxide (\(\ce{V2O5}\))
+                        </figcaption>
+                    </figure>
+                    <li>
+                        Vanadium shows unusually many adjacent oxidation states; it shows the \(\ce{+2}\), \(\ce{+3}\), \(\ce{+4}\) and \(\ce{+5}\) oxidation states in various compounds
+                    </li>
+                    <figure>
+                        <img src="img/255px-Vanadiumoxidationstates.jpg">
+                        <figcaption number="2">
+                            Solutions of \(\ce{V^2+}\), \(\ce{V^3+}\), \(\ce{VO^2+}\) and \(\ce{VO2+}\), from left to right
+                        </figcaption>
+                    </figure>
+                    <li>
+                        Ammonium metavanadate (\(\ce{NH4VO3}\)) is a common compound containing \(\ce{V}\) in the \(\ce{+5}\) oxidation state. It may be dissolved in sulfuric acid, or some strong acid to obtain a mixture of \(\ce{V(V)}\).
+                    </li>
+                </ul>
+                <div class="buttonContainer">
+                    <a href="menu.html"><button class="button">Main Menu</button></a>
+                    <a href="vReactions.html"><button class="button">Reactions of Vanadium</button></a>
+                </div>
+            </div>
+            <div class="arrowContainer" style="right: 0;">
+                <a href="cr.html">
+                    <img src="img/icons8-forward-96.png" class="navArrow">
+                </a>
+            </div>
+        </div>
+        <script src="elementScripts.js"></script>
+    </body>
+</html>

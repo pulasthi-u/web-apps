@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    font-family: Roboto;
+}
+
+.chemText {
+    display: inline;
+    font-family: CMU Serif;
+    font-size: 17px;
+}
+
+.chemReaction {
+    display: block;
+    text-align: center;
+    font-family: CMU Serif;
+    font-size: 20px;
+}
+
+#mainSection {
+    display: grid;
+    width: calc(100vw - 17px);
+}

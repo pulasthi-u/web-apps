@@ -1,0 +1,285 @@
+<!-- animate the progress bar --!>
+<style>
+
+#progress {
+position:absolute;
+height:0.7%;
+background-color:green;
+top:0;
+left:0;
+}
+
+#container {
+position:relative;
+background-color:#f5f5f5;
+box-shadow:0.5px 0.5px 2px 0.2px gray;
+width:75%;
+height:65%;
+padding:2%;
+margin-left:auto;
+margin-right:auto;
+margin-top:5%;
+}
+
+#flashcards {
+border:1px solid blue;
+position:absolute;
+left:0;
+right:0;
+margin-top:3%;
+margin-right:auto;
+margin-left:auto;
+width:25%;
+height:65%;
+}
+
+.frontcard {
+position:relative;
+background-color:white;
+padding:5%;
+box-shadow:0.5px 0.5px 2px 0.2px gray;
+height:100%;
+width:100%;
+}
+
+.backcard {
+position:relative;
+background-color:white;
+padding:5%;
+text-align:center;
+box-shadow:0.5px 0.5px 2px 0.2px gray;
+font-family:Segoe UI;
+height:100%;
+width:100%;
+}
+
+#instructions {
+display:none;
+position:absolute;
+top:3%;
+left:38.25%;
+width:25%;
+text-align:center;
+color:rgb(169, 169, 169);
+padding:0.5%;
+font-family:Segoe UI;
+font-size:20px;
+}
+
+@keyframes cover {
+0% {transform:rotateY(0deg);}
+100% {transform:rotateY(90deg);}
+}
+
+@keyframes show {
+0% {opacity:1; transform:rotateY(265deg);}
+100% {transform:rotateY(360deg);}
+}
+
+#dA {
+position:absolute;
+top:87%;
+left:40.4%;
+width:20%;
+text-align:center;
+color:rgb(169, 169, 169);
+padding:0.5%;
+font-family:Segoe UI;
+font-size:20px;
+}
+
+#twobutns {
+display:none;
+border-collapse:collapse;
+width:50%;
+position:absolute;
+height:6%;
+top:87%;
+left:25.5%;
+}
+
+#twobutns td {
+width:50%;
+padding:2%;
+font-family:Segoe UI;
+text-align:center;
+border:1px solid green;
+}
+
+#twobutns td:hover {
+transition-property:background-color;
+transition-duration:0.3s;
+transition-timing-function:ease-out;
+background-color:green;
+color:white;
+cursor:pointer;
+}
+</style>
+<script src = "Javascript.js"></script>
+
+
+<body id = "body" style = "margin:0;" onkeypress = "hide(event);">
+
+<div id = "container">
+<div id = "progress"></div>
+<div id = "instructions">
+Do you remember this card?
+</div>
+
+
+<div id = "flashcards">
+
+<div id = "cB" class = "frontcard" style = "background-image:url('arc.png'); background-origin:content-box; background-size:contain; background-repeat:no-repeat; background-position:center; display:none;" onclick = "turn('cB', 'cA')">
+</div>
+
+<div id = "cA" class = "backcard" style = "transform:rotateY(270deg); display:none;">
+<p style = "font-size:27px;">Arc</p>
+<p style = "font-size:17px;">A part of a circle's circumference</p>
+</div>
+
+
+<div id = "bB" class = "backcard" style = "transform:rotateY(270deg); display:none;">
+<p style = "font-size:27px;">Sector</p>
+<p style = "font-size:17px;">A part of a circle including its center and two radii</p>
+</div>
+
+<div id = "bA" class = "frontcard" style = "background-image:url('sector.png'); background-origin:content-box; background-size:contain; background-repeat:no-repeat; background-position:0% 40%; display:none;" onclick = "turn('bA', 'bB')">
+</div>
+
+
+<div id = "aA" class = "backcard" style = "transform:rotateY(270deg);">
+<p style = "font-size:27px;">Circumference</p>
+<p style = "font-size:17px;">The boundary of a circle</p>
+</div>
+
+<div id = "aB" class = "frontcard" style = "background-image:url('circumference.png'); background-origin:content-box; background-size:contain; background-repeat:no-repeat; background-position:center;" onclick = "turn('aB', 'aA')">
+</div>
+
+</div>
+
+<div id = "dA">Click to turn</div>
+
+<table id = "twobutns">
+<tr>
+<td>I remember</td>
+<td>I don't remember</td>
+</tr>
+</table>
+
+</div>
+
+</body>
+
+<script>
+var prevdivfront;
+var prevdivback;
+var progress = 10;
+
+function turn(x, y) {
+var a = document.getElementById(x);
+var b = document.getElementById(y);
+prevdivfront = x;
+prevdivback = y;
+a.style.animationName = "cover";
+a.style.animationDuration = "0.2s";
+a.style.animationFillMode = "forwards";
+setTimeout( function() {b.style.animationName = "show"; b.style.animationDuration = "0.2s"; b.style.animationFillMode = "forwards";}, 200);
+document.getElementById('dA').innerHTML = "Press ENTER to continue";
+progress = progress + 10;
+document.getElementById('progress').style.width = progress + "%";
+}
+
+var happened;
+var alphabet = ['a', 'b', 'c', 'd', 'e', 'f'];
+
+function hide(event) {
+if (prevdivback != "cA") {
+document.getElementById('dA').innerHTML = "Click to turn";
+var key = event.keyCode;
+if (key == 13 ) {
+document.getElementById(prevdivfront).style.display = "none";
+document.getElementById(prevdivback).style.display = "none";
+var spl = prevdivfront.split('');
+var car = spl[0];
+var i = alphabet.indexOf(car);
+var letter = alphabet[i+1];
+var newdivf = letter + "A";
+var newdivb = letter + "B";
+var newDivf = document.getElementById(newdivf);
+var newDivb = document.getElementById(newdivb);
+prevdivfront = newdivf;
+if (newDivf != null) {
+newDivf.style.display = "block";
+newDivf.style.marginTop = "-"+height+"px";
+}
+if (newDivb != null) {
+newDivb.style.display = "block";
+}
+}
+} else {
+if (!happened) {
+happened = true;
+document.getElementById('cA').style.display = "none";
+document.getElementById('cB').style.display = "none";
+document.getElementById('dA').style.display = "none";
+document.getElementById('twobutns').style.display = "table";
+document.getElementById('instructions').style.display = "block";
+document.getElementById('flashcards').style.marginTop = "3.5%";
+showonecard();
+}
+}
+}
+
+var divs = ['a', 'b', 'c'];
+
+function showonecard() {
+var cardcontainer = document.getElementById('flashcards');
+var order = getOrder().split('');
+var theDiv = divs[order[0]]+"A";
+var div = document.getElementById(theDiv);
+if (div.className == 'backcard') {
+backdiv = div;
+div.style.transform = "rotateY(275deg)";
+div.style.animationName = "";
+alert(div.className);
+div = document.getElementById(theDiv.replace('A', 'B'));
+alert(div.className);
+}
+div.style.display = "block";
+div.style.animationName = "";
+div.style.animationDuration = "";
+var margin = div.style.marginTop;
+div.style.transform = "";
+if ((margin.replace('px', '')) < 0) {
+div.style.marginTop = "0px";
+}
+backdiv.style.display = "block";
+backdiv.style.marginTop = "-"+height+"px";
+}
+
+function randomnum(number) {
+var random = (Math.random()*100);
+var num = random % (number);
+return Math.floor(num);
+}
+
+var string="";
+
+function getOrder() {
+string = "";
+while (!((string.includes('2')) && (string.includes('0')) && (string.includes('1')))) {
+var a = (randomnum(3));
+if (!(string.includes(a))) {
+var string = string + a;
+}
+}
+return string;
+}
+
+var height;
+var block = document.getElementById('aA');
+height = block.clientHeight;
+document.getElementById('aB').style.marginTop = "-"+height+"px";
+</script>
+
+</html>

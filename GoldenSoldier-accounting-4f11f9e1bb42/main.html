@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            Accounting
+        </title>
+        <link rel="stylesheet" href="mainStyles.css">
+        <script src="mainScript.js"></script>
+    </head>
+    <body>
+        <div id="overlay">
+            <dialog class="dialog">
+                <img src="Inventory/c1.jpg" class="picture">
+                <h2 class="itemHeading">Strawberry Iced Vanilla Cupcakes</h2>
+                <table class="itemInfo">
+                    <tr>
+                        <td>Quantity Available</td>
+                        <td>5221</td>
+                    </tr>
+                    <tr>
+                        <td>Unit Selling Price</td>
+                        <td>LKR 450.00</td>
+                    </tr>
+                    <tr>
+                        <td>Unit Buying Price</td>
+                        <td>LKR 400.00</td>
+                    </tr>
+                </table>
+                <section class="operations">
+                    <fieldset class="fieldSet">
+                        <legend>Incur Sale</legend>
+                            <table class="fieldSetTable">
+                                <tr>
+                                    <td><label for="qty">Sell</label></td>
+                                    <td colspan=2><input type="number" min=0 name="qty" id="qty" class="textbox" placeholder="Quantity"></td>
+                                    <td>items</td>
+                                </tr>
+                                <tr>
+                                    <td><label for="customer">to</label></td>
+                                    <td colspan=3><input type="text" name="customer" id="customer" class="textbox" placeholder="Customer"></td>
+                                </tr>
+                                <tr>
+                                    <td>on</td>
+                                    <td colspan=3>
+                                        <select class="dropDown">
+                                            <option value="" disabled selected>- Select basis -</option>
+                                            <option value="cash">Cash</option>
+                                            <option value="credit">Credit</option>
+                                            <option value="cheque">Cheque</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><label for="discount">with</label></td>
+                                    <td style="width: 18%;"><input type="number" min=0 max=100 name="discount" id="discount" class="textbox"></td>
+                                    <td style="width: 43%;">% discount, <label for="terms">on terms</label></td>
+                                    <td><input type="text" name="terms" id="terms" class="textbox" value="2/10 net/30"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan=4><input type="submit" class="submit" value="Create invoice"></td>
+                                </tr>
+                            </table>
+                    </fieldset>
+                    <fieldset class="fieldSet">
+                        <legend>Buy Raw Materials</legend>
+                    </fieldset>
+                </section>
+            </dialog>
+        </div>
+        <header id="mainHeader">
+            <img src="company.png" id="logo">
+            <h2 id="siteHeader">eAccounting</h2>
+            <button id="info"></button>
+            <button id="settings"></button>
+            <img src="wall1.jpg" id="profPic">
+            <span id="profName">Team Infinitium</span>
+        </header>
+        <aside id="navBar">
+            <ul id="navItems">
+                <li>Inventory</li>
+                <li>Vendors</li>
+                <li>Customers</li>
+            </ul>
+        </aside>
+        <section id="body">
+            <section id="menuBar">
+                Dashboard > Inventory > Finished Goods
+            </section>
+            <section id="content">
+                <section class="item">
+                    <img class="picture" src="Inventory/c1.jpg">
+                    <section class="description">
+                        <h2 class="itemHeading">Strawberry Iced Vanilla Cupcakes</h2>
+                        <table class="itemInfo">
+                            <tr>
+                                <td>Quantity Available</td>
+                                <td>5221</td>
+                            </tr>
+                            <tr>
+                                <td>Unit Selling Price</td>
+                                <td>LKR 450.00</td>
+                            </tr>
+                        </table>
+                    </section>
+                </section>
+                <section class="item">
+                    <img class="picture" src="Inventory/c2.jpg">
+                    <section class="description">
+                        <h2 class="itemHeading">Funfetti Cupcakes</h2>
+                        <table class="itemInfo">
+                            <tr>
+                                <td>Quantity Available</td>
+                                <td>5421</td>
+                            </tr>
+                            <tr>
+                                <td>Unit Selling Price</td>
+                                <td>LKR 550.00</td>
+                            </tr>
+                        </table>
+                    </section>
+                </section>
+                <section class="item">
+                    <img class="picture" src="Inventory/c3.jpg">
+                    <section class="description">
+                        <h2 class="itemHeading">Premium Chocolate Cupcakes</h2>
+                        <table class="itemInfo">
+                            <tr>
+                                <td>Quantity Available</td>
+                                <td>381</td>
+                            </tr>
+                            <tr>
+                                <td>Unit Selling Price</td>
+                                <td>LKR 375.00</td>
+                            </tr>
+                        </table>
+                    </section>
+                </section>
+                <section class="item">
+                    <img class="picture" src="Inventory/c4.jpg">
+                    <section class="description">
+                        <h2 class="itemHeading">Ice Cream Sundae Cupcakes</h2>
+                        <table class="itemInfo">
+                            <tr>
+                                <td>Quantity Available</td>
+                                <td>1951</td>
+                            </tr>
+                            <tr>
+                                <td>Unit Selling Price</td>
+                                <td>LKR 800.00</td>
+                            </tr>
+                        </table>
+                    </section>
+                </section>
+                <button id="fab">+</button>
+            </section>
+        </section>
+    </body>
+</html>

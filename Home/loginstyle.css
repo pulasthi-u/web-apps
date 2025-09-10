@@ -1,0 +1,86 @@
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    margin: 0;
+    background-image:url('loginback.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Segoe UI;
+}
+
+#box {
+    position: absolute;
+    margin-left: 36%;
+    width: 28%;
+}
+
+#head {
+    box-shadow: 0.5px 0.5px 5px 1px gray;
+    background-color: rgba(255,255,255,0.6);
+    position: absolute;
+    width: 100%;
+    margin-top: 35%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.tbox {
+    width: 88%;
+    padding: 6%;
+    font-family: Segoe UI;
+    border:0;
+}
+
+.button {
+    width: 100%;
+    padding: 5%;
+    background-color:rgb(110,108,121);
+    border:0;
+    font-family: Segoe UI;
+    color: white;
+}
+
+.button:hover {
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    background-color: darkgrey;
+    color:black;
+}
+
+.tbox:focus{
+    box-shadow: 1px 1px 2px 1px gray;
+}
+
+#back {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 5%;
+    height: 10%;
+    background-color: rgba(255,255,255,0.6);
+    background-image: url('back.png');
+    background-position: center;
+    background-size: 60% 60%;
+    background-repeat: no-repeat;
+}
+
+#back:hover {
+    transition-property: all;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in-out;
+    background-color: white;
+}

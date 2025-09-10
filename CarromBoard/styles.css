@@ -1,0 +1,21 @@
+body {
+    margin: 50px;
+}
+
+#carromBoard {
+    height: 500px;
+    width: 500px;
+    border: 1px solid black;
+}
+
+#disc {
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    background-color: red;
+    transform: translateX(-10px) translateY(-10px);
+    animation-name: animate;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}

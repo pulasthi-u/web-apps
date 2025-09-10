@@ -1,0 +1,278 @@
+body {
+    margin: 0;
+    font-family: Roboto;
+    display: grid;
+    grid-template-columns: 20vw 80vw;
+    grid-template-rows: 12vh 87vh;
+    grid-template-areas:
+        "mainHeader mainHeader"
+        "navBar body";
+}
+
+#mainHeader {
+    display: grid;
+    grid-area: mainHeader;
+    grid-template-columns: 1.2vw 7vh auto 9vh 9vh 9vh 20vh;
+    grid-template-areas:
+        ". logo header info settings profPic profName";
+    padding: 2vh;
+    align-content: center;
+}
+
+#logo {
+    width: 100%;
+    object-fit: cover;
+    align-self: center;
+    grid-area: logo;
+}
+
+#siteHeader {
+    margin: 0;
+    align-self: center;
+    grid-area: header;
+    font-weight: 400;
+}
+
+#info {
+    grid-area: info;
+    width: 100%;
+    border: 0;
+    background: white url('inf.png') center/45% no-repeat;
+    outline: none;
+}
+
+#settings {
+    grid-area: settings;
+    width: 100%;
+    border: 0;
+    background: white url('cogs.png') center/45% no-repeat;
+    outline: none;
+}
+
+#info:hover, #settings:hover {
+    cursor: pointer;
+}
+
+#profPic {
+    grid-area: profPic;
+    height: 100%;
+    object-fit: cover;
+    place-self: center;
+    border-radius: 100%;
+    box-shadow: 0px 0px 0.2px 0.5px lightgray;
+}
+
+#profName {
+    grid-area: profName;
+    place-self: center;
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.75);
+    visibility: hidden;
+}
+
+.dialog {
+    display: grid;
+    width: 50vw;
+    height: 60vh;
+    padding: 2vh;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 0;
+    text-align: center;
+    box-shadow: 0px 0px 2px 0.5px white;
+    grid-template-columns: 45% 55%;
+    grid-template-rows: 70% 4vh auto;
+    grid-template-areas:
+        "picture operations"
+        ". operations"
+        ". operations";
+}
+
+.operations {
+    display: grid;
+    grid-area: operations;
+    text-align: left;
+    padding: 0vh 0 0 2vh;
+}
+
+.fieldSet {
+    border: 1px solid lightgray;
+    margin-bottom: 1vh;
+    font-size: 2.1vh;
+}
+
+.fieldSetTable {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.textbox {
+    width: calc(100% - 2.4vh);
+    padding: 1vh;
+    margin: 0.2vh;
+    border: 0;
+    border-bottom: 1px solid lightgray;
+    font-family: Roboto;
+    font-size: 2vh;
+    outline: none;
+}
+
+.textbox:focus {
+    box-shadow: 0px 0px 1px 0.5px lightgray;
+    border: 0;
+}
+
+.dropDown {
+    margin: 0.2vh;
+    padding: 1vh;
+    font-family: Roboto;
+    font-size: 2vh;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid lightgray;
+    outline: none;
+}
+
+.submit {
+    width: 100%;
+    height: 6vh;
+    padding: 1vh;
+    margin: 0.2vh;
+    border: 1px solid lightgray;
+    background-color: transparent;
+    font-family: Roboto;
+    font-size: 2vh;
+}
+
+#navBar {
+    display: inline-grid;
+    grid-area: navBar;
+}
+
+#navItems {
+    list-style-type: none;
+    width: 75%;
+    margin: 0;
+    padding-left: 6%;
+}
+
+#navItems li {
+    padding: 2vh;
+}
+
+#body {
+    display: grid;
+    grid-area: body;
+    grid-template-rows: 7vh auto;
+    grid-template-areas:
+        "menuBar"
+        "stuff";
+}
+
+#menuBar {
+    display: inline-grid;
+    grid-area: menuBar;
+    align-content: center;
+    padding-left: 2vh;
+    color: gray;
+    font-size: 2vh;
+}
+
+#content {
+    display: grid;
+    grid-area: stuff;
+    grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+    overflow-x: hidden;
+    /*padding: 0.5vh;*/
+}
+
+.item {
+    display: grid;
+    box-shadow: 0px 0px 2px 0.5px lightgray;
+    height: 49vh;
+    width: 23vw;
+    grid-template-rows: 73% 27%;
+    grid-template-areas:
+        "picture"
+        "description";
+    justify-self: center;
+    padding: 1vh;
+    margin: 1vh 0;
+}
+
+.item:hover {
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+    box-shadow: 0px 0px 2px 1px lightgray;
+}
+
+.picture {
+    display: inline-grid;
+    grid-area: picture;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.description {
+    display: inline-grid;
+    grid-area: description;
+    padding: 1vh;
+    text-align: center;
+    align-content: center;
+}
+
+.itemHeading {
+    margin: 1vh 0 0 0;
+    font-weight: normal;
+    font-size: 2.7vh;
+}
+
+.itemInfo {
+    margin-top: 0.5vh;
+    border-collapse: collapse;
+    font-size: 2vh;
+}
+
+.itemInfo td {
+    padding: 0.5vh;
+}
+
+.itemInfo tr td:nth-child(1) {
+    text-align: left;
+}
+
+.itemInfo tr td:nth-child(2) {
+    text-align: right;
+}
+
+#fab {
+    position: fixed;
+    bottom: 4vh;
+    right: calc(17px + 4vh);
+    padding: 0;
+    height: 10vh;
+    width: 10vh;
+    border: 0px;
+    border-radius: 100%;
+    background-color: rgb(128, 203, 196);
+    text-align: center;
+    color: white;
+    font-size: 5vh;
+    box-shadow: 0px 0px 6px 1px lightgray;
+    outline: none;
+}
+
+#fab:hover {
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 1px gray;
+}
