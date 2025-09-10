@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="temp.css">
+        <link rel="stylesheet" href="graph.css">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="current">
+            <div id="meterContainer">
+                <div id="currentTempContainer">
+                    <h3 id="currentTemp">25&deg;C</h3>
+                </div>
+                <div id="fullMeter">
+                    <h3>40&deg;C</h3>
+                    <div id="meter">
+                        <div id="level"></div>
+                    </div>
+                    <h3>15&deg;C</h3>
+                </div>
+            </div>
+            <div id="textContainer">
+                <h2>Current Tank Temperature</h2>
+                <h1>25&deg;C</h1>
+                <h3>Your fish are doing great 😊</h3>
+                <button>Refresh</button>
+            </div>
+        </div>
+        <div id="graph">
+            <h2>Average Temperatures Recorded</h2>
+            <div id="graphContainer">
+                <div id="yAxisHeaders">
+                    <div class="yHeader">45&deg;C</div>
+                    <div class="yHeader">40&deg;C</div>
+                    <div class="yHeader">35&deg;C</div>
+                    <div class="yHeader">30&deg;C</div>
+                    <div class="yHeader">25&deg;C</div>
+                    <div class="yHeader">20&deg;C</div>
+                    <div class="yHeader">15&deg;C</div>
+                    <div class="yHeader">10&deg;C</div>
+                </div>
+                <div id="polygonContainer">
+                    <div id="gridlines">
+                        <div class="gridline"></div>
+                        <div class="gridline"></div>
+                        <div class="gridline"></div>
+                        <div class="gridline"></div>
+                        <div class="gridline"></div>
+                        <div class="gridline"></div>
+                        <div class="gridline"></div>
+                    </div>
+                    <div id="poly"></div>
+                </div>
+                <div id="xAxisHeaders">
+                    <div class="xHeader">Wednesday, 27th September</div>
+                        <div class="xHeader">Thursday, 28th September</div>
+                        <div class="xHeader">Friday, 29th September</div>
+                        <div class="xHeader">Monday, 30th September</div>
+                        <div class="xHeader">Tuesday, 01st October</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

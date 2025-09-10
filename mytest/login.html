@@ -1,0 +1,17 @@
+<html>
+		<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+		$var = $_POST["user"];
+		echo($var);
+} else {
+;
+}
+	?>
+	<form name = "login" method = "post" action = "<?php echo (htmlspecialchars($_SERVER['PHP_SELF']));?>">
+	
+		<input type = "text" name = "user" placeholder = "Username">
+		<input type = "text" name = "pass" placeholder = "Password">
+		<input type = "submit" name = "go" value = "OK">
+		
+	</form>
+</html>

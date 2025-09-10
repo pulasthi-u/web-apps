@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Add New Book
+        </title>
+        <link rel="stylesheet" href="addBookStyles.css">
+        <script src="addBookScripts.js"></script>
+    </head>
+    <body>
+        <form name="addBook" action="get"> <!-- get or post -->
+            
+            <div id="container">
+                <div id="addImg">
+                    <label id="bookImg">
+                        <input type="file" name="bookImg">
+                        <img src="https://img.icons8.com/ios/344/book.png">
+                        <span>Add Image</span>
+                    </label>
+                </div>
+                <div id="details">
+                    <span id="bookId">#51258</span>
+                    
+                    <textarea id="bookTitle" name="bookTitle" placeholder="Book Title" rows="1" cols="20" wrap="soft" onkeyup="expand()" autofocus></textarea>
+                    
+                    <span id="authors">
+                        <span id="addAuthorBtn" onclick="showAuthorList()">+ Add Authors</span>
+                    </span>
+                    <div class="backdrop">
+                        <div id="authorsBox">
+                            <img src="https://www.seekpng.com/png/full/89-899803_png-file-svg-close-tab-icon-png.png">
+                            <div id="selected_box">
+                                <span>Pulasthi Udugamasooriya</span>
+                                <span>John Doe</span>
+                                <span>Alice Doe</span>
+                            </div>
+                            <div id="checkboxes">
+                                <input type="checkbox" name="51246" id="51246">
+                                <label for="51246">Steve Jobs</label>
+                                
+                                <input type="checkbox" name="61646" id="61646">
+                                <label for="61646">Steve Carrell</label>
+                                
+                                <input type="checkbox" name="98273" id="98273">
+                                <label for="98273">Julia Roberts</label>
+                                
+                            </div>
+                            <div id="buttons_box">
+                                <button>Add New Author</button>
+                                <button>Done</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <label>Language:</label>
+                    <div>
+                        <input type="radio" id="sin" name="language" value="sin" checked>
+                        <label for="sin">Sinhala</label>
+                        <input type="radio" id="eng" name="language" value="eng">
+                        <label for="eng">English</label>
+                        <input type="radio" id="tam" name="language" value="tam">
+                        <label for="tam">Tamil</label>
+                        <input type="radio" id="other" name="language" value="other">
+                        <label for="other">Other</label>
+                    </div>
+                    
+                    <select name="category">
+                        <option value="-">Pick a Book Category</option>
+                        <option value="a">A1</option>
+                        <option value="a2">A2</option>
+                        <option value="b">B1</option>
+                        <option value="b2">B2</option>
+                        <option value="c">C1</option>
+                    </select>
+                    
+                    <input type="text" id="isbn" placeholder="ISBN">
+                    
+                    <input type="number" id="copies" placeholder="No. of copies">
+                    
+                    <div>
+                        <input type="submit" value="Add Book">
+                        <button id="cancel">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </body>
+</html>

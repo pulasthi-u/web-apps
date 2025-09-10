@@ -1,0 +1,10 @@
+body {
+    margin: 0;
+}
+
+#stage {
+    width: 99vh;
+    height: 99vh;
+    margin: auto;
+    /*overflow: hidden;*/
+}

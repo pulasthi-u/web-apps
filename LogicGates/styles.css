@@ -1,0 +1,53 @@
+body {
+    margin: 0
+}
+
+#stage {
+    width: 99vw;
+    height: 99vh;
+}
+
+.stateDisplay {
+    position: absolute;
+    width: 5vh;
+    height: 5vh;
+    background-color: red;
+}
+
+.stateConnector {
+    position: relative;
+    width: 1vh;
+    height: 1vh;
+    border-radius: 1vh;
+    left: 4.5vh;
+    top: 2vh;
+    background-color: darkred;
+}
+
+.stateConnector:hover {
+    cursor: pointer;
+}
+
+.stateTextContainer {
+    display: block;
+    text-align: center;
+}
+
+.input {
+    position: absolute;
+    display: flex;
+    align-content: center;
+    height: 5vh;
+    width: 5vh;
+    background-color: red;   
+}
+
+.input:hover {
+    cursor: move;
+}
+
+.inputLabel {
+    display: block;
+    text-align: center;
+    margin: auto;
+}

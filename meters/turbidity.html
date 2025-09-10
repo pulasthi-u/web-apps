@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="turbidity.css">
+        <link rel="stylesheet" href="graph.css">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="current">
+            <div id="meterContainer">
+                <svg viewBox="0 0 100 100">
+                    <path d="
+                             M 14.644 85.355
+                             A 50 50 0 1 1 85.355 85.355
+                             L 78.284 78.284
+                             A 40 40 0 1 0 21.715 78.284
+                             Z"
+                    id="meterBack"/>
+                    <path d="
+                             M 14.644 85.355
+                             A 50 50 0 0 1 25 6.698
+                             L 30 15.358
+                             A 40 40 0 0 0 21.715 78.284
+                             Z"
+                    id="meterLevel"/>
+                    <text x="21.715" y="78.284" dominant-baseline="hanging">0%</text>
+                    <text x="78.284" y="78.284" text-anchor="end" dominant-baseline="hanging">100%</text>
+                </svg>
+            </div>
+            <div id="textContainer">
+                <h2>Current Turbidity</h2>
+                <h1>25%</h1>
+                <h3>The water is clear ✨</h3>
+                <button>Refresh</button>
+            </div>
+        </div>
+        <div id="graph">
+            <h2>Average Turbidities Recorded</h2>
+            <div id="graphContainer">
+                <div id="yAxisHeaders">
+                    <div class="yHeader">100%</div>
+                    <div class="yHeader">87.5%</div>
+                    <div class="yHeader">75%</div>
+                    <div class="yHeader">62.5%</div>
+                    <div class="yHeader">50%</div>
+                    <div class="yHeader">37.5%</div>
+                    <div class="yHeader">25%</div>
+                    <div class="yHeader">12.5%</div>
+                </div>
+                <div id="polygonContainer">
+                    <div id="gridlines">
+                        <div class="gridline"></div>
+                        <div class="gridline"></div>
+                        <div class="gridline"></div>
+                        <div class="gridline"></div>
+                        <div class="gridline"></div>
+                        <div class="gridline"></div>
+                        <div class="gridline"></div>
+                    </div>
+                    <div id="poly"></div>
+                </div>
+                <div id="xAxisHeaders">
+                    <div class="xHeader">Wednesday, 27th September</div>
+                        <div class="xHeader">Thursday, 28th September</div>
+                        <div class="xHeader">Friday, 29th September</div>
+                        <div class="xHeader">Monday, 30th September</div>
+                        <div class="xHeader">Tuesday, 01st October</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

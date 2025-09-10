@@ -1,0 +1,79 @@
+#graph {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#graph h2 {
+    font-size: 30px;
+}
+
+
+#yAxisHeaders {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    grid-area: yAxis;
+}
+
+.yHeader {
+    width: 100%;
+    padding-right: 30px;
+    text-align: right;
+}
+
+#xAxisHeaders {
+    margin-top: 20px;
+    display: flex;
+    grid-area: xAxis;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.xHeader {
+    width: 15%;
+    font-size: 14px;
+}
+
+#poly {
+    width: 100%;
+    height: 100%;
+    /*background-color: rgba(255,0,0,0.3);*/
+    background: linear-gradient(0deg, rgba(255,255,255,0.1) 0%, rgba(220,20,20,0.7) 100%);
+    clip-path: polygon(0 100%, 0 30%, 10% 75%, 30% 55%, 50% 60%, 70% 40%, 90% 35%, 100% 68%, 100% 100%);
+}
+
+#gridlines {
+    width: calc(0.9 * 70vw);
+    height: calc(0.9 * 70vh);
+    position: absolute;
+}
+
+.gridline {
+    width: 100%;
+    height: calc(100%/8);
+    border-bottom: 1px solid lightgray;
+}
+
+#polygonContainer {
+    width: 100%;
+    height: 100%;
+    grid-area: poly;
+}
+
+#graphContainer {
+    display: grid;
+    height: 70vh;
+    width: 70vw;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 90% 10%;
+    grid-template-areas:
+        "yAxis poly"
+        ". xAxis";
+    /*border: 1px solid;*/
+    font-weight: bold;
+}

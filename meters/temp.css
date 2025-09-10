@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    font-family: Quicksand;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+#current {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#meterContainer {
+    display: flex;
+    align-items: center;
+    margin-right: 5vh;
+}
+
+#currentTempContainer {
+    height: 55vh;
+}
+
+#currentTemp {
+    margin-right: 1.5vh;
+    background-color: rgba(0,0,0,0.1);
+    padding: 5px;
+    margin-top: calc(0.4 * 55vh);
+}
+
+#fullMeter {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#meter {
+    display: flex;
+    border: 2px solid;
+    height: 55vh;
+    width: 4.5vw;
+    align-items: flex-end;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 1vh 0;
+}
+
+#level {
+    height: 60%;
+    background-color: red;
+    /*background: linear-gradient(0deg, rgba(150,9,100,1) 45%, rgba(220,20,20,1) 100%);*/
+    width: 100%;
+}
+
+#textContainer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5vh;
+}
+
+#textContainer h2 {
+    font-size: 30px;
+}
+
+#textContainer h1 {
+    font-size: 80px;
+}
+
+#textContainer button {
+    margin-top: 3vh;
+    font-size: 15px;
+    color: black;
+    font-weight: bold;
+    width: 12vw;
+    padding: 12px;
+    background-color: transparent;
+    font-family: Quicksand;
+    border: 1px solid;
+    border-radius: 100px;
+}
