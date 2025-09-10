@@ -1,0 +1,359 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infitech | Future Technology</title>
+
+<style>
+
+@keyframes load {
+0% {transform:translateX(100vw);}
+100% {transform:translateX(0px);}
+}
+
+@keyframes loadleft {
+0% {transform:translateX(-100vw);}
+100% {transform:translateX(0px);}
+}
+
+#header {
+position:relative;
+background-image:url('back.gif');
+background-repeat:no-repeat;
+background-position:center;
+background-size:cover;
+width:100%;
+height:100vh;
+}
+
+#contain {
+position:relative;
+width:100%;
+}
+
+#inside {
+padding:30px;
+position:absolute;
+margin-top:17%;
+margin-left:26.5%;
+width:40%;
+}
+
+#com{
+background-color:rgb(93, 173, 226);
+}
+
+#com:hover{
+transition:background-color 0.5s ease-out;
+-webkit-transition:background-color 0.5s ease-out;
+-moz-transition:background-color 0.5s ease-out;
+-o-transition:background-color 0.5s ease-out;
+background-color:white;
+}
+
+#industry{
+background-color:rgb(0,206,209);
+}
+
+#industry:hover{
+transition:background-color 0.5s ease-out;
+-webkit-transition:background-color 0.5s ease-out;
+-moz-transition:background-color 0.5s ease-out;
+-o-transition:background-color 0.5s ease-out;
+background-color:white;
+}
+
+#health{
+background-color:#f5f5f5;
+}
+
+#health:hover{
+transition:background-color 0.5s ease-out;
+-webkit-transition:background-color 0.5s ease-out;
+-moz-transition:background-color 0.5s ease-out;
+-o-transition:background-color 0.5s ease-out;
+background-color:white;
+}
+
+#transport{
+background-color:#78909C;
+}
+
+#transport:hover{
+transition:background-color 0.5s ease-out;
+-webkit-transition:background-color 0.5s ease-out;
+-moz-transition:background-color 0.5s ease-out;
+-o-transition:background-color 0.5s ease-out;
+background-color:white;
+}
+
+#security{
+background-color:#b39ddb;
+}
+
+#security:hover{
+transition:background-color 0.5s ease-out;
+-webkit-transition:background-color 0.5s ease-out;
+-moz-transition:background-color 0.5s ease-out;
+-o-transition:background-color 0.5s ease-out;
+background-color:white;
+}
+
+
+a:visited{
+color:black;
+}
+
+a:link{
+color:black;
+text-decoration:none;
+}
+
+#footer{
+position:relative;
+background-color:#f5f5f5;
+width:100%;
+}
+
+#menu{
+position:absolute;
+width:100%;
+border-collapse:collapse;
+}
+
+.thing{
+padding:1%;
+display:inline;
+background-color:#f5f5f5;
+}
+
+.thing:hover{
+transition:background-color 0.5s ease-out;
+-webkit-transition:background-color 0.5s ease-out;
+-moz-transition:background-color 0.5s ease-out;
+-o-transition:background-color 0.5s ease-out;
+background-color:gray;
+}
+
+</style>
+</head>
+
+<font face="Segoe UI">
+
+<script src='Javascript.js'></script>
+<body onscroll="enter()" onload="if (window.innerWidth < 500) { breaktables('indtable'); breaktables('comtable'); breaktables('heatable'); breaktables('sectable'); breaktables('tratable'); breaktables('menu');}">
+
+<div id="header">
+
+<center>
+<div id="inside" style="background-color:white;opacity:0.8;"><font size=10 style="opacity:1;">Infitech</font>
+<br>
+<font size=4 face="Segoe UI">Welcome to Infitech! At Infitech, we feature gadgets, technological advancements and futuristic developments in the fields of Information Technology, Engineering and Electronics. Take your time and enjoy your visit to our website!</font>
+</center>
+
+</div>
+</div>
+
+<div id="contain" style="position:relative;">
+
+<a href="communication.html">
+<table id="comtable" style="opacity:1;">
+<tr id="com">
+<td id="commun" style="width:30%; background-image:url('communication.png'); background-repeat:no-repeat; background-position:center; background-size:cover;"></td>
+<td id="commu" style="width:70%;">
+<p style="text-align:left; padding:4.6%;">
+<font size=7>Communication</font>
+<br>
+Communication has been a part of human's lives since the earliest we can think of. It started with just basic gestures and sounds, and developed into the languages we use at present. Today, communication has developed in ways we would never have imagined...
+</font>
+</p>
+</td>
+</tr>
+</table>
+</a>
+
+<a href="health.htm">
+<table id="heatable" style="opacity:1;">
+<tr id="health">
+<td id="heal" style="width:70%;">
+<p style="text-align:right; padding:4.6%;"><font size=7>Health</font>
+<br>
+Health is one of the most important human needs. Today, due to all the advancements that have taken place in the present world, human lives have become very complex, and the time they get to focus on their health has become very less. Also, people nowadays have to face even more complex diseases and disorders, where Medicine we know of today has no effect. Interesting changes have taken place in the field of Health as well...
+</font>
+</p>
+</td>
+<td id="healt" style="width:30%; background-image:url('healthpage2.jpg'); background-repeat:no-repeat; background-position:center; background-size:cover;"></td>
+</tr>
+</table>
+</a>
+
+<a href="security.html">
+<table id="sectable" style="opacity:1;">
+<tr id="security">
+<td id="securi" style="width:30%; background-image:url('cctv.png'); background-repeat:no-repeat; background-position:center; background-size:cover;"></td>
+<td id="secur" style="width:70%;">
+<p style="text-align:left; padding:4.6%;">
+<font size=7>Security</font>
+<br>
+People now are at a greater threat of insecurity than was a few years ago. Robberies, burglaries and numerous such threats which have had a large effect on society have been reported recently. The solution that can be taken for this is to improve the security systems we have at present, and it is happening at an interestingly fast rate...
+</font>
+</p>
+</td>
+</tr>
+</table>
+</a>
+
+<a href="industry.html">
+<table id="indtable" style="opacity:1;">
+<tr id="industry">
+<td id="indus" style="width:70%;">
+<p style="text-align:right; padding:4.6%;">
+<font size=7>Industry</font>
+<br>
+Since the Industrial Revolution in the 17<sup>th</sup> - 18<sup>th</sup> centuries, industry has developed at an amazingly fast rate. These developments have brought about lots of unimagined contraptions, and has replaced much of what humans did previously. What we once thought was sci-fi, is now becoming true...
+</font>
+</p>
+</td>
+<td id="indust" style="width:30%; background-image:url('industry.jpg'); background-repeat:no-repeat; background-position:center; background-size:cover;"></td>
+</tr>
+</table>
+</a>
+
+<a href="transport.htm">
+<table id="tratable" style="opacity:1;">
+<tr id="transport">
+<td id="transp" style="width:30%; background-image:url('transp.jpg'); background-repeat:no-repeat; background-position:0% 50%; background-size:cover;"></td>
+<td id="trans" style="width:70%;">
+<p style="text-align:left;  padding:4.6%;">
+<font size=7>Transport</font>
+<br>
+Since the invention of the wheel, transport has developed in all sorts of ways upto now, and of course, it will continue to develop. Science and Technology has developed so much these days, that flying cars, cars which drive themselves, and all sorts of such amazing vehicles have come into being...
+</p>
+</td>
+</tr>
+</table>
+</a>
+
+</div>
+
+
+<div id="footer">
+<center>
+<div style='border:1px solid #f5f5f5;'>
+<p style='padding:1%'>&copy Copyright 2017 - Team Infinitium | All Rights Reserved</p>
+</div>
+<table id="menu">
+<tr>
+<td><center><a href="Home.htm"><p class="thing">Home</p></a></center></td>
+<td><center><a href="communication.html"><p class="thing">Communication</p></a></center></td>
+<td><center><a href="health.htm"><p class="thing">Health</p></a></center></td>
+<td><center><a href="security.html"><p class="thing">Security</p></a></center></td>
+<td><center><a href="industry.html"><p class="thing">Industry</p></a></center></td>
+<td><center><a href="transport.htm"><p class="thing">Transport</p></a></center></td>
+</tr>
+</table>
+</center>
+</div>
+<br>
+<br>
+<br>
+<script>
+
+function breaktables(tableid) {
+
+	var table = document.getElementById(tableid);
+
+	var numOfRows = table.rows.length;
+
+	for (row = 1; row <= numOfRows; row++) {
+
+		var numOfCells = table.rows[row-1].cells.length;
+		var height = table.rows[row-1].clientHeight;
+		
+		for (cell = 1; cell <= numOfCells; cell++) {
+
+			var cellToEdit = table.rows[row-1].cells[cell-1];
+			var insideTable = cellToEdit.innerHTML;
+
+			if (insideTable == '') {
+
+				cellToEdit.style.display = 'block';
+				cellToEdit.style.height = height + 'px';
+
+			} else {
+
+				cellToEdit.style.display = 'block';
+				cellToEdit.children[0].style.textAlign = 'center';
+
+			}
+
+			cellToEdit.style.width = '100%';
+
+		}
+
+	}
+
+}
+
+function enter() {
+
+var health = document.getElementById('heatable');
+var com = document.getElementById('comtable');
+var security = document.getElementById('sectable');
+var industry = document.getElementById('indtable');
+var transport = document.getElementById('tratable');
+
+var scrl = window.scrollY;
+
+var height1 = com.clientHeight;
+var height2 = health.clientHeight;
+var height3 = security.clientHeight;
+var height4 = industry.clientHeight;
+var height5 = transport.clientHeight;
+
+if ((scrl < height1)&(com.style.opacity==1)) {
+com.style = 'opacity:0;';
+}
+
+if ((scrl < (height1+height2))&(health.style.opacity=='1')) {
+health.style = 'opacity:0;';
+}
+
+if ((scrl < (height1+height2+height3))&(security.style.opacity=='1')) {
+security.style = 'opacity:0;';
+}
+
+if ((scrl < (height1+height2+height3+height4))&(industry.style.opacity=='1')) {
+industry.style = 'opacity:0;';
+}
+
+if ((scrl < (height1+height2+height3+height4+height5))&(transport.style.opacity=='1')) {
+transport.style = 'opacity:0;';
+}
+
+
+if (scrl > height1) {
+com.style = 'animation-name:load; animation-duration:1.5s; animation-timing-function:ease-in-out;';
+}
+
+if (scrl > (height1+height2)) {
+health.style = 'animation-name:loadleft; animation-duration:1.5s; animation-timing-function:ease-in-out;';
+}
+
+if (scrl > (height1+height2+height3)) {
+security.style = 'animation-name:load; animation-duration:1.5s; animation-timing-function:ease-in-out;';
+}
+
+if (scrl > (height1+height2+height3+height4)) {
+industry.style = 'animation-name:loadleft; animation-duration:1.5s; animation-timing-function:ease-in-out;';
+}
+
+if (scrl > (height1+height2+height3+height4+height5)) {
+transport.style = 'animation-name:load; animation-duration:1.5s; animation-timing-function:ease-in-out;';
+}
+}
+</script>
+
+</body>
+</font>
+</html>

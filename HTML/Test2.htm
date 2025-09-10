@@ -1,0 +1,69 @@
+<!doctype html>
+
+<style>
+
+#butn {
+position:relative;
+background-color:#90caf9;
+width:200px;
+height:80px;
+border:0;
+overflow:hidden;
+cursor:default;
+}
+
+
+</style>
+
+<script src='Javascript.js'></script>
+
+
+<body onload="centerText('butn', 'para');">
+
+<div onclick="ripple(event, 'di')" id="butn">
+
+<div id="di" style='position:absolute; background-color:#448aff; width:0px; height:0px; border-radius:100%;'></div>
+
+<font face="Segoe UI" size='4'><p id="para" style='position:absolute; margin-left:100px; margin-top:40px;'>Click</p></font>
+
+</div>
+
+<br>
+
+<script>
+
+function ripple(event, divid) {
+
+var maxradius = document.getElementById('butn').clientWidth;
+var div = document.getElementById(divid);
+var body = document.getElementsByTagName('body')[0];
+var xlength = event.clientX;
+var ylength = event.clientY;
+var bodyTopMargin = window.getComputedStyle(body).getPropertyValue('margin-top');
+var bodyTopMargin = bodyTopMargin.replace('px', '');
+var bodyLeftMargin = window.getComputedStyle(body).getPropertyValue('margin-left');
+var bodyLeftMargin = bodyLeftMargin.replace('px', '');
+var Lmargin = xlength - bodyLeftMargin;
+var Tmargin = ylength - bodyTopMargin;
+div.style.marginTop = Tmargin + 'px';
+div.style.marginLeft = Lmargin + 'px';
+
+var zero = "0% {width:0px; height:0px; opacity:0.5; background-color:#448aff; border-radius:100%; margin-left:"+Lmargin+"px; margin-top:"+Tmargin+"px;} ";
+var fifty = "50% {width:"+(maxradius)+"px; height:"+(maxradius)+"px; opacity:0.7; background-color:#448aff; border-radius:100%; margin-top:"+(Tmargin-maxradius)+"px; margin-left:"+(Lmargin-maxradius)+";} ";
+var hundred = "100% {width:" + (maxradius*2) + "px; height:" + (maxradius*2) + "px; opacity:0; background-color:#448aff; border-radius:100%; margin-left:"+(Lmargin-(maxradius*2))+"px; margin-top:"+(Tmargin-(maxradius*2))+"px;}";
+var animation = "@keyframes ripple { " + zero + fifty + hundred + "}";
+document.getElementsByTagName('style')[0].insertAdjacentHTML('beforeend', animation);
+
+div.style.animationName = 'ripple';
+div.style.animationDuration = '0.4s';
+div.style.animationTimingFunction = 'ease-out';
+setTimeout(function() {div.style.animationName = '';}, 1000);
+
+}
+
+
+</script>
+
+</body>
+
+</html>
